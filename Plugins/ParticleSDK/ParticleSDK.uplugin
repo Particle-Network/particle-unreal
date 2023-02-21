@@ -1,0 +1,24 @@
+{
+  "FileVersion" : 1,
+	"Version" : 1,
+	"VersionName" : "0.10.0",
+	"FriendlyName" : "Particle UE SDK",
+	"Description" : "Add support for Particle Service.",
+	"Category" : "Particle",
+	"CreatedBy" : "Particle Network",
+	"CreatedByURL" : "",
+	"DocsURL" : "https://docs.particle.network/",
+	"MarketplaceURL" : "",
+	"SupportURL" : "",
+	"CanContainContent" : true,
+	"IsBetaVersion" : false,
+	"RequiresBuildPlatform" : false,
+	"Modules" :
+	[
+    {
+      "Name": "ParticleSDK",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    }
+	]
+}
