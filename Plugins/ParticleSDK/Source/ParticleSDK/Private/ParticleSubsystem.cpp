@@ -40,7 +40,7 @@ void UParticleSubsystem::Init(
 	ChainId = InChainId;
 	Language = InLanguage;
 
-	UE_LOG(LogTemp, Log, TEXT("Particle SDK init, Config = %s, ChainName=%s, ChainId=%lld, Language = %s, Theme = %s"),
+	UE_LOG(LogTemp, Log, TEXT("Particle SDK init, Config = %s, ChainName = %s, ChainId = %lld, Language = %s, Theme = %s"),
 	       *Config, *ChainName, ChainId, *Language, *Theme);
 
 	this->DefaultBrowserWidgetClass = DefaultBrowserWidget;
@@ -148,9 +148,9 @@ void UParticleSubsystem::OnSign(const FString& JsonString) const
 		OnSignMessageEvent.Broadcast(JsonString);
 	}
 	else if (Result.Method == FSignMethod::Eth_SignTypedData
-		|| Result.Method == FSignMethod::Eth_SignTypedData1
-		|| Result.Method == FSignMethod::Eth_SignTypedData3
-		|| Result.Method == FSignMethod::Eth_SignTypedData4)
+		|| Result.Method == FSignMethod::Eth_signTypedData_v1
+		|| Result.Method == FSignMethod::Eth_SignTypedData_v3
+		|| Result.Method == FSignMethod::Eth_SignTypedData_v4)
 	{
 		OnSignTypedDataEvent.Broadcast(JsonString);
 	}
@@ -214,16 +214,16 @@ void UParticleSubsystem::SignTypedData(const FString Message, const SignTypedDat
 	switch (Version)
 	{
 	case SignTypedDataVersion::Default:
-		Method = "eth_signTypedData";
+		Method = FSignMethod::Eth_SignTypedData;
 		break;
 	case SignTypedDataVersion::V1:
-		Method = "eth_signTypedData_v1";
+		Method = FSignMethod::Eth_signTypedData_v1;
 		break;
 	case SignTypedDataVersion::V3:
-		Method = "eth_signTypedData_v3";
+		Method = FSignMethod::Eth_SignTypedData_v3;
 		break;
 	case SignTypedDataVersion::V4:
-		Method = "eth_signTypedData_v4";
+		Method = FSignMethod::Eth_SignTypedData_v4;
 		break;
 	}
 

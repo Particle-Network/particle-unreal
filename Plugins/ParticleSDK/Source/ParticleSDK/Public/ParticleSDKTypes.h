@@ -18,9 +18,9 @@ public:
 	// Evm
 	static const FString Eth_SendTransaction;
 	static const FString Eth_SignTypedData;
-	static const FString Eth_SignTypedData1;
-	static const FString Eth_SignTypedData3;
-	static const FString Eth_SignTypedData4;
+	static const FString Eth_signTypedData_v1;
+	static const FString Eth_SignTypedData_v3;
+	static const FString Eth_SignTypedData_v4;
 	static const FString Personal_Sign;
 
 	// Solana

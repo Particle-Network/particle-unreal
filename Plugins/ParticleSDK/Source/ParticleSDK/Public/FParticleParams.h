@@ -22,9 +22,9 @@ class UParticleConfigWallet final : public UObject
 
 public:
 	UPROPERTY(BlueprintReadWrite, Category="Particle | Config")
-	bool displayWalletEntry;
+	bool DisplayWalletEntry;
 	UPROPERTY(BlueprintReadWrite, Category="Particle | Config")
-	FVector2D defaultWalletEntryPosition;
+	FVector2D DefaultWalletEntryPosition;
 	UPROPERTY(BlueprintReadWrite, Category="Particle | Config")
 	TArray<FString> SupportChains;
 	UPROPERTY(BlueprintReadWrite, Category="Particle | Config")

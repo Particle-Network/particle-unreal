@@ -52,8 +52,8 @@ public:
 
 	/**
 	 * @brief Login
-	 * @param PreferredAuthType you can pass "phone" or "email".
-	 * @param Account you can pass phone number or email address.
+	 * @param PreferredAuthType you can pass "phone", "email" or "jwt".
+	 * @param Account for email and phone, it is optional, for jwt it is required.
 	 */
 	UFUNCTION(BlueprintCallable, Category = "Particle | Login")
 	void Login(const FString& PreferredAuthType, const FString& Account) const;
