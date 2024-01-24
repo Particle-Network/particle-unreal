@@ -90,14 +90,14 @@ public:
 	 * @brief Sign transaction, only support solana.
 	 * @param Transaction request base58 string.
 	 */
-	UFUNCTION(BlueprintCallable, Category = "Particle | SignTrsnaction")
+	UFUNCTION(BlueprintCallable, Category = "Particle | SignTransaction")
 	void SignTransaction(const FString& Transaction);
 
 	/**
 	 * @brief Sign all transactions, only support solana.
 	 * @param Transactions request base58 string array.
 	 */
-	UFUNCTION(BlueprintCallable, Category = "Particle | SignAllTrsnactions")
+	UFUNCTION(BlueprintCallable, Category = "Particle | SignAllTransactions")
 	void SignAllTransactions(const TArray<FString> Transactions);
 	
 	UFUNCTION(BlueprintCallable, Category = "Particle | ClearCache")
