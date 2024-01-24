@@ -67,3 +67,5 @@ Intermediate/*
 DerivedDataCache/*
 
 Plugins/Developer
+Binaries/*
+Plugins/ParticleSDK/Intermediate
